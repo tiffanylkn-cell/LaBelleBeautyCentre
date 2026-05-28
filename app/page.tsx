@@ -6,7 +6,6 @@ export default function Home() {
   const mainSlides = [
     "/assets/img/beauty_1_new.png",
     "/assets/img/beauty_2_new.png",
-    "/assets/img/beauty_3_new.png",
   ];
 
   const gallerySlides = [

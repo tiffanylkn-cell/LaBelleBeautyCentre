@@ -32,7 +32,7 @@ export default function Navbar() {
           />
         </Link>
         <div className="text-right hidden sm:block">
-          <p className="text-xs text-zinc-500 uppercase tracking-widest">Call or WhatsApp</p>
+          <p className="text-xs text-zinc-500 uppercase tracking-widest">WhatsApp</p>
           <a
             href="https://wa.me/60109191218"
             className="text-sm font-semibold text-amber-600 hover:text-amber-700 transition-colors"

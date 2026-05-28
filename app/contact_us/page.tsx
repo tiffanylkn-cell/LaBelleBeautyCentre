@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-const MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
+const MAP_EMBED_URL =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.2271098260417!2d101.61147477532647!3d3.033644753851077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cdb355399d229f%3A0xe07163890549fae1!2s1%2C%20Jalan%20Bandar%20Sepuluh%2C%20Pusat%20Bandar%20Puchong%2C%2047100%20Puchong%2C%20Selangor%2C%20Malaysia!5e0!3m2!1sen!2sie!4v1779981309014!5m2!1sen!2sie";
 
 export default function ContactPage() {
   return (
@@ -26,12 +27,12 @@ export default function ContactPage() {
             <div className="w-full min-h-[400px] lg:min-h-full bg-zinc-100 relative">
               <iframe
                 allowFullScreen
-                frameBorder="0"
                 loading="lazy"
-                src={`https://www.google.com/maps/embed/v1/place?key=${MAPS_API_KEY}&q=1-2A%2C+Jalan+Bandar+10%2C+Pusat+Bandar+Puchong%2C+47160+Puchong.&zoom=18`}
+                referrerPolicy="no-referrer-when-downgrade"
+                src={MAP_EMBED_URL}
                 className="absolute inset-0 w-full h-full border-0"
                 title="La Belle Beauty Centre Location Map"
-              ></iframe>
+              />
             </div>
 
             {/* Info Cards Column */}
