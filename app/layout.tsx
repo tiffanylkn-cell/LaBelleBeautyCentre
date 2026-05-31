@@ -22,6 +22,24 @@ export const metadata: Metadata = {
     "La Belle Beauty Centre brings the essence of true Korean beauty right to you. Combining advanced skincare science, time-honored traditions, and holistic treatments to nurture your skin from the inside out.",
   keywords: "beauty centre, skin management, Puchong beauty clinic, anti aging treatment, skin tag removal, eye bag removal, Korean beauty",
   authors: [{ name: "La Belle Beauty Centre" }],
+  openGraph: {
+    title: "La Belle Beauty Centre",
+    description:
+      "La Belle Beauty Centre brings the essence of true Korean beauty right to you. Combining advanced skincare science, time-honored traditions, and holistic treatments to nurture your skin from the inside out.",
+    siteName: "La Belle Beauty Centre",
+  },
+  icons: {
+    icon: [
+      {
+        url: "/lblogo.png",
+        type: "image/png",
+        sizes: "922x914",
+      },
+      { url: "/lblogo.ico", sizes: "any", type: "image/x-icon" },
+    ],
+    shortcut: ["/lblogo.png"],
+    apple: [{ url: "/lblogo.png" }],
+  },
 };
 
 export default function RootLayout({
