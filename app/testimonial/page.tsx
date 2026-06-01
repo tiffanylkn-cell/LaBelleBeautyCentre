@@ -1,40 +1,7 @@
 import Image from "next/image";
+import testimonials from "./testimonial.json";
 
 export default function TestimonialPage() {
-  const testimonials = [
-    {
-      name: "Madam Chin",
-      age: 80,
-      image: "/testimonial/NmnTesti1.png",
-      concerns: "Wrinkles, pigmentation, uneven and dull skin tone, eye bags, laugh lines, marionette lines, and dry skin.",
-      treatment: "NMN Cell Renewal Treatment",
-      results: "Overall skin tone appeared brighter and more even, pigmentation was visibly lightened, and eye bags were reduced. Laugh lines and marionette lines appeared significantly softened, leaving the skin looking smoother, more supple, and rejuvenated.",
-    },
-    {
-      name: "Mrs. How",
-      age: 65,
-      image: "/testimonial/UltraLiftTesti2.png",
-      concerns: "Wrinkles, fine lines, and uneven, dull skin tone.",
-      treatment: "Ultra Lift Treatment",
-      results: "Fine lines were visibly reduced, wrinkles appeared softened, and the skin looked brighter with a more even and radiant skin tone.",
-    },
-    {
-      name: "Ms. Lim",
-      age: 25,
-      image: "/testimonial/Sooth Calm Testi .png",
-      concerns: "Sensitized skin around the mouth area, congested pores, blackheads, enlarged pores, and dehydrated skin.",
-      treatment: "Soothe And Calm Treatment",
-      results: "Redness and irritation were visibly reduced, while pores and blackheads appeared minimized. Skin felt smoother, more hydrated, and visibly radiant with a healthy glow.",
-    },
-    {
-      name: "Ms. Tee",
-      age: 20,
-      image: "/testimonial/SoothCalmTesti1.png",
-      concerns: "Dark patches on the cheeks, redness, congested pores, and dull skin.",
-      treatment: "Personalized Treatment for Acne and Sensitive Skin.",
-      results: "Dark patches appeared lighter, redness was visibly reduced, and the skin looked softer, more hydrated, and radiant with a healthy glow.",
-    },
-  ];
 
   return (
     <div className="flex flex-col pb-16">
@@ -63,7 +30,7 @@ export default function TestimonialPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {testimonials.map((testi, idx) => (
             <div
-              key={idx}
+              key={`${testi.name}-${idx}`}
               className="bg-white rounded-3xl shadow-sm hover:shadow-md border border-zinc-100 p-6 flex flex-col space-y-6 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Profile Image COMPARISON Case */}
