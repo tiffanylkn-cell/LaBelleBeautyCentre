@@ -10,7 +10,7 @@ export default function ContactPage() {
       {/* Visual Banner */}
       <section className="relative w-full aspect-[2.91/0.96] max-h-[350px] overflow-hidden bg-zinc-200 shadow-inner">
         <Image
-          src="/contact_us/assets/img/Contact_Us.png"
+          src="/contact_us/Contact_Us.png"
           alt="Contact Us Banner"
           fill
           priority
@@ -55,11 +55,10 @@ export default function ContactPage() {
                 <div className="space-y-2">
                   <h3 className="text-base font-serif font-bold text-zinc-950 flex items-center gap-2">
                     <Image
-                      src="/contact_us/assets/img/Digital_Glyph_Green.png"
+                      src="/assets/img/Digital_Glyph_Green.png"
                       alt="WhatsApp Icon"
                       width={18}
-                      height={18}
-                      className="object-contain"
+                      height={19}
                     />
                     <span>WhatsApp</span>
                   </h3>

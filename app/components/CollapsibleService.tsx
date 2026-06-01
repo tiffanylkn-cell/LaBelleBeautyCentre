@@ -79,7 +79,7 @@ export default function CollapsibleService({
       >
         <span>Book Appointment Now</span>
         <Image
-          src="/our_service/assets/img/wa_logo.png"
+          src="/assets/img/wa_logo.png"
           alt="WhatsApp Logo"
           width={20}
           height={20}

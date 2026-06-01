@@ -183,7 +183,7 @@ export default function Home() {
               className="w-full sm:w-auto px-8 py-3 border border-zinc-300 hover:bg-white text-zinc-800 font-serif font-semibold rounded-xl transition-all duration-200 flex items-center justify-center gap-2"
             >
               <Image
-                src="/our_service/assets/img/wa_logo.png"
+                src="/assets/img/wa_logo.png"
                 alt="WhatsApp"
                 width={18}
                 height={18}

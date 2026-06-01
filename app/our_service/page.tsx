@@ -208,7 +208,7 @@ export default function ServicesPage() {
       {/* Header Banner */}
       <section className="relative w-full aspect-[2.91/0.96] max-h-[350px] overflow-hidden bg-zinc-200 shadow-inner">
         <Image
-          src="/our_service/assets/img/our_services.png"
+          src="/our_service/our_services.png"
           alt="Our Services Banner"
           fill
           priority

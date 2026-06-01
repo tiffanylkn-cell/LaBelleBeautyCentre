@@ -1,20 +1,7 @@
 import Image from "next/image";
+import promotions from "./promotions.json";
 
 export default function PromotionPage() {
-  const promotions = [
-    {
-      title: "Korean Skin Rejuvenation Special",
-      image: "/promotion/assets/img/beauty_3_new.jpeg",
-      description: "Experience the premium touch of advanced Korean clinical skin care. Designed to target fine lines, restore elasticity, and leave your complexion glowing with timeless radiance.",
-      badge: "Best Seller",
-    },
-    {
-      title: "Signature Holistic Face Therapy",
-      image: "/promotion/assets/img/beauty_4_new.jpeg",
-      description: "Indulge in a deeply relaxing, non-invasive therapeutic session combining botanical active ingredients and precise skin massage to clear congestion, soothe sensitivity, and lift contours.",
-      badge: "Limited Offer",
-    },
-  ];
 
   return (
     <div className="flex flex-col pb-16">
@@ -40,11 +27,11 @@ export default function PromotionPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {promotions.map((promo, idx) => (
             <div
-              key={idx}
+              key={`${promo.title}-${idx}`}
               className="bg-white rounded-3xl shadow-sm hover:shadow-md border border-zinc-100 overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-1"
             >
               {/* Promotion Image Card */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-zinc-50 border-b border-zinc-100 group shadow-inner">
+              <div className="relative w-full overflow-hidden bg-zinc-50 border-b border-zinc-100 group">
                 {promo.badge && (
                   <span className="absolute top-4 left-4 z-10 text-xs font-semibold uppercase tracking-wider bg-amber-600 text-white px-3 py-1 rounded-full shadow-sm">
                     {promo.badge}
@@ -53,8 +40,12 @@ export default function PromotionPage() {
                 <Image
                   src={promo.image}
                   alt={promo.title}
-                  fill
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-103"
+                  width={1080}
+                  height={1080}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  priority={idx < 2}
+                  loading={idx < 2 ? "eager" : "lazy"}
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-103"
                 />
               </div>
 

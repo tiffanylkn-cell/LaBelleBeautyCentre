@@ -5,7 +5,7 @@ export default function TestimonialPage() {
     {
       name: "Madam Chin",
       age: 80,
-      image: "/testimonial/assets/img/NmnTesti1.png",
+      image: "/testimonial/NmnTesti1.png",
       concerns: "Wrinkles, pigmentation, uneven and dull skin tone, eye bags, laugh lines, marionette lines, and dry skin.",
       treatment: "NMN Cell Renewal Treatment",
       results: "Overall skin tone appeared brighter and more even, pigmentation was visibly lightened, and eye bags were reduced. Laugh lines and marionette lines appeared significantly softened, leaving the skin looking smoother, more supple, and rejuvenated.",
@@ -13,7 +13,7 @@ export default function TestimonialPage() {
     {
       name: "Mrs. How",
       age: 65,
-      image: "/testimonial/assets/img/UltraLiftTesti2.png",
+      image: "/testimonial/UltraLiftTesti2.png",
       concerns: "Wrinkles, fine lines, and uneven, dull skin tone.",
       treatment: "Ultra Lift Treatment",
       results: "Fine lines were visibly reduced, wrinkles appeared softened, and the skin looked brighter with a more even and radiant skin tone.",
@@ -21,7 +21,7 @@ export default function TestimonialPage() {
     {
       name: "Ms. Lim",
       age: 25,
-      image: "/testimonial/assets/img/Sooth Calm Testi .png",
+      image: "/testimonial/Sooth Calm Testi .png",
       concerns: "Sensitized skin around the mouth area, congested pores, blackheads, enlarged pores, and dehydrated skin.",
       treatment: "Soothe And Calm Treatment",
       results: "Redness and irritation were visibly reduced, while pores and blackheads appeared minimized. Skin felt smoother, more hydrated, and visibly radiant with a healthy glow.",
@@ -29,7 +29,7 @@ export default function TestimonialPage() {
     {
       name: "Ms. Tee",
       age: 20,
-      image: "/testimonial/assets/img/SoothCalmTesti1.png",
+      image: "/testimonial/SoothCalmTesti1.png",
       concerns: "Dark patches on the cheeks, redness, congested pores, and dull skin.",
       treatment: "Personalized Treatment for Acne and Sensitive Skin.",
       results: "Dark patches appeared lighter, redness was visibly reduced, and the skin looked softer, more hydrated, and radiant with a healthy glow.",
@@ -67,12 +67,14 @@ export default function TestimonialPage() {
               className="bg-white rounded-3xl shadow-sm hover:shadow-md border border-zinc-100 p-6 flex flex-col space-y-6 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Profile Image COMPARISON Case */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl bg-zinc-50 border border-zinc-100 group shadow-inner">
+              <div className="relative w-full overflow-hidden rounded-2xl bg-zinc-50 border border-zinc-100 group">
                 <Image
                   src={testi.image}
                   alt={`${testi.name} Transformation Result`}
-                  fill
-                  className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-103"
+                  width={1080}
+                  height={1080}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="w-full h-auto transition-transform duration-500 group-hover:scale-103"
                 />
               </div>
 
@@ -120,12 +122,14 @@ export default function TestimonialPage() {
             Your satisfaction and confidence are our top priority.
           </p>
 
-          <div className="relative w-full max-w-4xl mx-auto aspect-[10.19/4] shadow-lg rounded-2xl overflow-hidden mt-10 border border-zinc-200/50">
+          <div className="relative w-full max-w-4xl mx-auto shadow-lg rounded-2xl overflow-hidden mt-10 border border-zinc-200/50">
             <Image
-              src="/testimonial/assets/img/google_review.png"
+              src="/testimonial/google_review.png"
               alt="Google Reviews Summary"
-              fill
-              className="object-cover w-full h-full"
+              width={1019}
+              height={400}
+              sizes="(max-width: 896px) 100vw, 896px"
+              className="w-full h-auto"
             />
           </div>
         </div>

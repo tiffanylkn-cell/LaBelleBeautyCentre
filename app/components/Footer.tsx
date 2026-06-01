@@ -51,7 +51,6 @@ export default function Footer() {
                   alt="WhatsApp"
                   width={36}
                   height={37}
-                  className="w-9 h-9 object-contain"
                 />
               </a>
               <a
