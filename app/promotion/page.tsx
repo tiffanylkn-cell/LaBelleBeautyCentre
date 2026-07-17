@@ -62,7 +62,7 @@ export default function PromotionPage() {
 
                 <a
                   href={`https://wa.me/60109191218?text=${encodeURIComponent(
-                    `Hi La Belle, I'm interested in your "${promo.title}" promotion!`
+                    promo.whatsappMessage
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
